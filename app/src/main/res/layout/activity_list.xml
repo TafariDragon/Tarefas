@@ -36,7 +36,7 @@
         android:src="@drawable/baseline_add_24"
         app:backgroundTint="@color/white"
         android:tint="@color/azul"
-        app:rippleColor="@color/black"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

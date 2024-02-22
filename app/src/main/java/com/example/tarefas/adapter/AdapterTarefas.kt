@@ -21,7 +21,7 @@ class AdapterTarefas (private val context:Context,private val listaTarefas:Mutab
     // AdapterTarefas.kt
 
     override fun onBindViewHolder(holder: TarefasViewHolder, position: Int) {
-        holder.
+        holder.txtTarefas.text= listaTarefas[position].getNome()
     }
 
     override fun getItemCount(): Int {
@@ -33,9 +33,7 @@ class AdapterTarefas (private val context:Context,private val listaTarefas:Mutab
 // Rest of the code remains the same
 
 
-    inner class TarefasViewHolder(binding:TarefasItemBinding):RecyclerView.ViewHolder(binding.root){
-
-
-        
+    inner class TarefasViewHolder(private val binding: TarefasItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        val txtTarefas = binding.txtTarefas
     }
 }

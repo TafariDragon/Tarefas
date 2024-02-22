@@ -9,12 +9,11 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        setContentView(R.layout.activity_main)
 
         Handler(Looper.getMainLooper()).postDelayed({
-           startActivity(Intent(this,ListActivity::class.java))
-        },3000)
-
+              startActivity(Intent(this,ListActivity::class.java))
+        },2000)
 
     }
 

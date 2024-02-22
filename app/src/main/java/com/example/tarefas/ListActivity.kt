@@ -13,7 +13,8 @@ class ListActivity : AppCompatActivity() {
     private  var listatarefas:MutableList<Tarefas> = mutableListOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list)
+        binding=ActivityListBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val recyclerViewTarefas = binding.recycleVieww
         recyclerViewTarefas.layoutManager= LinearLayoutManager(this)

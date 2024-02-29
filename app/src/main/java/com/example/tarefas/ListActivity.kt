@@ -16,12 +16,20 @@ class ListActivity : AppCompatActivity() {
         binding=ActivityListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnAdiconar.setOnClickListener {
+            val dialog = AddDialogFragment()
+            dialog.show(supportFragmentManager,dialog.tag)
+        }
+
+
         val recyclerViewTarefas = binding.recycleVieww
         recyclerViewTarefas.layoutManager= LinearLayoutManager(this)
         recyclerViewTarefas.setHasFixedSize(true)
         adapterTarefas= AdapterTarefas(this,listatarefas)
         recyclerViewTarefas.adapter=adapterTarefas
         inserirTarefas()
+
+
 
     }
 
